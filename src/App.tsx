@@ -2,8 +2,6 @@ import {
   Box,
   Typography,
   Card,
-  CardContent,
-  Grid,
   Button,
   Avatar,
   Stack,
@@ -74,7 +72,7 @@ const App: React.FC = () => {
             You scored higher than 65% of the people who have taken these tests.
           </Typography>
         </Box>
-        ```
+
         {/* Summary Section */}
         <Box
           sx={{
