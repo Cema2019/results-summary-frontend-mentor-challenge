@@ -15,9 +15,9 @@ const App: React.FC = () => {
       <Box
         sx={{
           display: "flex",
-          maxWidth: 800,
+          maxWidth: 500,
           backgroundColor: "white",
-          borderRadius: 4,
+          borderRadius: 7,
           boxShadow: 3,
           overflow: "hidden",
           flexDirection: { xs: "column", md: "row" },
@@ -31,6 +31,7 @@ const App: React.FC = () => {
             color: "white",
             padding: 3,
             textAlign: "center",
+            borderRadius: 7,
           }}
         >
           <Typography variant="h6" gutterBottom sx={{ color: "lightgray" }}>
