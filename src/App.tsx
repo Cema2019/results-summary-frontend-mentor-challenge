@@ -100,10 +100,10 @@ const App: React.FC = () => {
             Summary
           </Typography>
           <Stack spacing={1}>
-            <SummaryItem icon={<BoltRoundedIcon sx={{ color: "#ff595e" }} />} category="Reaction" score={80} color="#ff595e" backgroundColor="#fff6f5" />
-            <SummaryItem category="Memory" score={92} color="#ffca3a" backgroundColor="#fffbf2" />
-            <SummaryItem category="Verbal" score={61} color="#8ac926" backgroundColor="#f2fbfa" />
-            <SummaryItem category="Visual" score={72} color="#1982c4" backgroundColor="#f3f3fd" />
+            <SummaryItem icon="/src/assets/icon-reaction.svg" category="Reaction" score={80} color="#ff595e" backgroundColor="#fff6f5" />
+            <SummaryItem icon="/src/assets/icon-memory.svg" category="Memory" score={92} color="#ffca3a" backgroundColor="#fffbf2" />
+            <SummaryItem icon="/src/assets/icon-verbal.svg" category="Verbal" score={61} color="#8ac926" backgroundColor="#f2fbfa" />
+            <SummaryItem icon="/src/assets/icon-visual.svg" category="Visual" score={72} color="#1982c4" backgroundColor="#f3f3fd" />
           </Stack>
           <Button
             variant="contained"
@@ -129,7 +129,7 @@ type SummaryItemProps = {
   score: number;
   color: string;
   backgroundColor: string;
-  icon: React.ReactNode;
+  icon: string;
 };
 
 const SummaryItem: React.FC<SummaryItemProps> = ({
@@ -151,7 +151,7 @@ const SummaryItem: React.FC<SummaryItemProps> = ({
         boxShadow: 0,
       }}
     >
-      {icon}
+      <img src={icon} alt={`${category} icon`} width={24} height={24} />
       <Typography sx={{ fontWeight: "bold", color, backgroundColor }}>{category}</Typography>
       <Typography>
         <strong style={{ color: "#303b59" }}>{score}</strong> 
