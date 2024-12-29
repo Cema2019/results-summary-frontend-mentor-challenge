@@ -1,4 +1,5 @@
-import { Box, Typography, Card, Button, Avatar, Stack } from "@mui/material";
+import { Box, Typography, Button, Avatar, } from "@mui/material";
+import SummaryItems from "../components/summaryItems";
 
 const App: React.FC = () => {
   return (
@@ -28,7 +29,7 @@ const App: React.FC = () => {
         <Box
           sx={{
             flex: 1,
-            background: 'linear-gradient(360deg, #312cea, #6743ff)',
+            background: "linear-gradient(360deg, #312cea, #6743ff)",
             color: "white",
             padding: 3,
             textAlign: "center",
@@ -40,7 +41,7 @@ const App: React.FC = () => {
           </Typography>
           <Avatar
             sx={{
-              background: 'linear-gradient(180deg, #312cea 70%, #4633ed 100%)',
+              background: "linear-gradient(180deg, #312cea 70%, #4633ed 100%)",
               width: 150,
               height: 150,
               display: "flex",
@@ -101,36 +102,7 @@ const App: React.FC = () => {
           >
             Summary
           </Typography>
-          <Stack spacing={1}>
-            <SummaryItem
-              icon="/assets/icon-reaction.svg"
-              category="Reaction"
-              score={80}
-              color="#ff595e"
-              backgroundColor="#fff6f5"
-            />
-            <SummaryItem
-              icon="/assets/icon-memory.svg"
-              category="Memory"
-              score={92}
-              color="#ffca3a"
-              backgroundColor="#fffbf2"
-            />
-            <SummaryItem
-              icon="/assets/icon-verbal.svg"
-              category="Verbal"
-              score={61}
-              color="#8ac926"
-              backgroundColor="#f2fbfa"
-            />
-            <SummaryItem
-              icon="/assets/icon-visual.svg"
-              category="Visual"
-              score={72}
-              color="#1982c4"
-              backgroundColor="#f3f3fd"
-            />
-          </Stack>
+          <SummaryItems />
           <Button
             variant="contained"
             fullWidth
@@ -147,47 +119,6 @@ const App: React.FC = () => {
         </Box>
       </Box>
     </Box>
-  );
-};
-
-type SummaryItemProps = {
-  category: string;
-  score: number;
-  color: string;
-  backgroundColor: string;
-  icon: string;
-};
-
-const SummaryItem: React.FC<SummaryItemProps> = ({
-  category,
-  score,
-  color,
-  backgroundColor,
-  icon,
-}) => {
-  return (
-    <Card
-      sx={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: 2,
-        backgroundColor: backgroundColor,
-        borderRadius: 2,
-        boxShadow: 0,
-      }}
-    >
-      <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-        <img src={icon} alt={`${category} icon`} width={15} height={15} />
-        <Typography variant="caption" sx={{ fontWeight: "bold", color }}>{category}</Typography>
-      </Box>
-      <Box>
-      <Typography variant="caption" >
-        <strong style={{ color: "#303b59" }}>{score}</strong>
-        <span style={{ color: "#a0a2af", fontWeight: "bold" }}> / 100</span>
-      </Typography>
-      </Box>
-    </Card>
   );
 };
 

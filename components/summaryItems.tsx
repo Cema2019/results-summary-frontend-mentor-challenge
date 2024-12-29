@@ -1,5 +1,6 @@
+import React from "react";
 import { Stack, Card, Box, Typography } from "@mui/material";
-import summaryData  from "../data/data.json";
+import summaryData from "../data/data.json";
 
 type SummaryItemType = {
   category: string;
@@ -32,14 +33,19 @@ const SummaryItems: React.FC = () => {
               width={15}
               height={15}
             />
-            <Typography variant="caption" sx={{ fontWeight: "bold", color: item.color }}>
+            <Typography
+              variant="caption"
+              sx={{ fontWeight: "bold", color: item.color }}
+            >
               {item.category}
             </Typography>
           </Box>
           <Box>
             <Typography variant="caption">
               <strong style={{ color: "#303b59" }}>{item.score}</strong>
-              <span style={{ color: "#a0a2af", fontWeight: "bold" }}> / 100</span>
+              <span style={{ color: "#a0a2af", fontWeight: "bold" }}>
+                / 100
+              </span>
             </Typography>
           </Box>
         </Card>
