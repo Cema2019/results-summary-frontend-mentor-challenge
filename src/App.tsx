@@ -98,7 +98,7 @@ const App: React.FC = () => {
           <Typography variant="h6" sx={{ marginBottom: 2, fontWeight: "bold", color: "#303b59" }}>
             Summary
           </Typography>
-          <Stack spacing={2}>
+          <Stack spacing={1}>
             <SummaryItem category="Reaction" score={80} color="#ff595e" backgroundColor="#fff6f5" />
             <SummaryItem category="Memory" score={92} color="#ffca3a" backgroundColor="#fffbf2" />
             <SummaryItem category="Verbal" score={61} color="#8ac926" backgroundColor="#f2fbfa" />
