@@ -1,4 +1,5 @@
 import { Box, Typography, Card, Button, Avatar, Stack } from "@mui/material";
+import BoltRoundedIcon from '@mui/icons-material/BoltRounded';
 
 const App: React.FC = () => {
   return (
@@ -99,7 +100,7 @@ const App: React.FC = () => {
             Summary
           </Typography>
           <Stack spacing={1}>
-            <SummaryItem category="Reaction" score={80} color="#ff595e" backgroundColor="#fff6f5" />
+            <SummaryItem icon={<BoltRoundedIcon sx={{ color: "#ff595e" }} />} category="Reaction" score={80} color="#ff595e" backgroundColor="#fff6f5" />
             <SummaryItem category="Memory" score={92} color="#ffca3a" backgroundColor="#fffbf2" />
             <SummaryItem category="Verbal" score={61} color="#8ac926" backgroundColor="#f2fbfa" />
             <SummaryItem category="Visual" score={72} color="#1982c4" backgroundColor="#f3f3fd" />
@@ -128,6 +129,7 @@ type SummaryItemProps = {
   score: number;
   color: string;
   backgroundColor: string;
+  icon: React.ReactNode;
 };
 
 const SummaryItem: React.FC<SummaryItemProps> = ({
@@ -135,6 +137,7 @@ const SummaryItem: React.FC<SummaryItemProps> = ({
   score,
   color,
   backgroundColor,
+  icon,
 }) => {
   return (
     <Card
@@ -148,6 +151,7 @@ const SummaryItem: React.FC<SummaryItemProps> = ({
         boxShadow: 0,
       }}
     >
+      {icon}
       <Typography sx={{ fontWeight: "bold", color, backgroundColor }}>{category}</Typography>
       <Typography>
         <strong style={{ color: "#303b59" }}>{score}</strong> 
