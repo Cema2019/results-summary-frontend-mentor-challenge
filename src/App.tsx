@@ -103,28 +103,28 @@ const App: React.FC = () => {
           </Typography>
           <Stack spacing={1}>
             <SummaryItem
-              icon="/src/assets/icon-reaction.svg"
+              icon="/assets/icon-reaction.svg"
               category="Reaction"
               score={80}
               color="#ff595e"
               backgroundColor="#fff6f5"
             />
             <SummaryItem
-              icon="/src/assets/icon-memory.svg"
+              icon="/assets/icon-memory.svg"
               category="Memory"
               score={92}
               color="#ffca3a"
               backgroundColor="#fffbf2"
             />
             <SummaryItem
-              icon="/src/assets/icon-verbal.svg"
+              icon="/assets/icon-verbal.svg"
               category="Verbal"
               score={61}
               color="#8ac926"
               backgroundColor="#f2fbfa"
             />
             <SummaryItem
-              icon="/src/assets/icon-visual.svg"
+              icon="/assets/icon-visual.svg"
               category="Visual"
               score={72}
               color="#1982c4"
