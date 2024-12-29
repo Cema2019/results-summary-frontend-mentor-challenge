@@ -178,11 +178,11 @@ const SummaryItem: React.FC<SummaryItemProps> = ({
       }}
     >
       <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-        <img src={icon} alt={`${category} icon`} width={24} height={24} />
-        <Typography sx={{ fontWeight: "bold", color }}>{category}</Typography>
+        <img src={icon} alt={`${category} icon`} width={15} height={15} />
+        <Typography variant="caption" sx={{ fontWeight: "bold", color }}>{category}</Typography>
       </Box>
       <Box>
-      <Typography>
+      <Typography variant="caption" >
         <strong style={{ color: "#303b59" }}>{score}</strong>
         <span style={{ color: "lightgray", fontWeight: "bold" }}> / 100</span>
       </Typography>
