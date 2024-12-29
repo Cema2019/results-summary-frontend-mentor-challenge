@@ -1,5 +1,5 @@
 import { Stack, Card, Box, Typography } from "@mui/material";
-import summaryData from "../data/data.json";
+import summaryData  from "../data/data.json";
 
 type SummaryItemType = {
   category: string;
