@@ -94,7 +94,7 @@ const App: React.FC = () => {
             padding: 3,
           }}
         >
-          <Typography variant="h6" sx={{ marginBottom: 2, fontWeight: "bold" }}>
+          <Typography variant="h6" sx={{ marginBottom: 2, fontWeight: "bold", color: "#303b59" }}>
             Summary
           </Typography>
           <Stack spacing={2}>
@@ -108,10 +108,10 @@ const App: React.FC = () => {
             fullWidth
             sx={{
               marginTop: 2,
-              backgroundColor: "#4e62c2",
+              backgroundColor: "#303b59",
               textTransform: "none",
               fontWeight: "bold",
-              ":hover": { backgroundColor: "#3a4da6" },
+              borderRadius: 4,
             }}
           >
             Continue
@@ -147,7 +147,8 @@ const SummaryItem: React.FC<SummaryItemProps> = ({
     >
       <Typography sx={{ fontWeight: "bold", color }}>{category}</Typography>
       <Typography>
-        <strong>{score}</strong> / 100
+        <strong style={{ color: "#303b59" }}>{score}</strong> 
+        <span style={{ color: "lightgray", fontWeight: "bold" }}> / 100</span>
       </Typography>
     </Card>
   );
