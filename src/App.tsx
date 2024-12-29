@@ -99,10 +99,10 @@ const App: React.FC = () => {
             Summary
           </Typography>
           <Stack spacing={2}>
-            <SummaryItem category="Reaction" score={80} color="#ff595e" />
-            <SummaryItem category="Memory" score={92} color="#ffca3a" />
-            <SummaryItem category="Verbal" score={61} color="#8ac926" />
-            <SummaryItem category="Visual" score={72} color="#1982c4" />
+            <SummaryItem category="Reaction" score={80} color="#ff595e" backgroundColor="#fff6f5" />
+            <SummaryItem category="Memory" score={92} color="#ffca3a" backgroundColor="#fffbf2" />
+            <SummaryItem category="Verbal" score={61} color="#8ac926" backgroundColor="#f2fbfa" />
+            <SummaryItem category="Visual" score={72} color="#1982c4" backgroundColor="#f3f3fd" />
           </Stack>
           <Button
             variant="contained"
@@ -127,12 +127,14 @@ type SummaryItemProps = {
   category: string;
   score: number;
   color: string;
+  backgroundColor: string;
 };
 
 const SummaryItem: React.FC<SummaryItemProps> = ({
   category,
   score,
   color,
+  backgroundColor,
 }) => {
   return (
     <Card
@@ -141,12 +143,12 @@ const SummaryItem: React.FC<SummaryItemProps> = ({
         justifyContent: "space-between",
         alignItems: "center",
         padding: 2,
-        backgroundColor: "#f9f9f9",
+        backgroundColor: backgroundColor,
         borderRadius: 2,
         boxShadow: 0,
       }}
     >
-      <Typography sx={{ fontWeight: "bold", color }}>{category}</Typography>
+      <Typography sx={{ fontWeight: "bold", color, backgroundColor }}>{category}</Typography>
       <Typography>
         <strong style={{ color: "#303b59" }}>{score}</strong> 
         <span style={{ color: "lightgray", fontWeight: "bold" }}> / 100</span>
