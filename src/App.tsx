@@ -135,7 +135,7 @@ const App: React.FC = () => {
             variant="contained"
             fullWidth
             sx={{
-              mb: 3,
+              my: 3,
               backgroundColor: "#303b59",
               textTransform: "none",
               fontWeight: "bold",
