@@ -16,6 +16,7 @@ const App: React.FC = () => {
         sx={{
           display: "flex",
           maxWidth: 500,
+          maxHeight: "400px",
           backgroundColor: "white",
           borderRadius: 7,
           boxShadow: 3,
@@ -27,21 +28,21 @@ const App: React.FC = () => {
         <Box
           sx={{
             flex: 1,
-            background: "linear-gradient(180deg, #4e62c2, #7856d8)",
+            background: "linear-gradient(360deg, #312cea, #6743ff)",
             color: "white",
             padding: 3,
             textAlign: "center",
             borderRadius: 7,
           }}
         >
-          <Typography variant="h6" gutterBottom sx={{ color: "lightgray" }}>
+          <Typography variant="h6" sx={{ color: "lightgray", marginBottom: 4 }}>
             Your Result
           </Typography>
           <Avatar
             sx={{
               backgroundColor: "blue",
-              width: 120,
-              height: 120,
+              width: 150,
+              height: 150,
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -107,7 +108,7 @@ const App: React.FC = () => {
             variant="contained"
             fullWidth
             sx={{
-              marginTop: 2,
+              mb: 3,
               backgroundColor: "#303b59",
               textTransform: "none",
               fontWeight: "bold",
