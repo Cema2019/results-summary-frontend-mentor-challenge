@@ -28,7 +28,7 @@ const App: React.FC = () => {
         <Box
           sx={{
             flex: 1,
-            background: "linear-gradient(360deg, #312cea, #6743ff)",
+            background: 'linear-gradient(360deg, #312cea, #6743ff)',
             color: "white",
             padding: 3,
             textAlign: "center",
@@ -40,7 +40,7 @@ const App: React.FC = () => {
           </Typography>
           <Avatar
             sx={{
-              backgroundColor: "blue",
+              background: 'linear-gradient(180deg, #312cea 70%, #4633ed 100%)',
               width: 150,
               height: 150,
               display: "flex",
