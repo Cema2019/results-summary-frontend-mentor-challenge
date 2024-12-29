@@ -15,13 +15,13 @@ const App: React.FC = () => {
       <Box
         sx={{
           display: "flex",
+          width: "100%",
           maxWidth: 500,
-          maxHeight: "400px",
           backgroundColor: "white",
           borderRadius: 7,
           boxShadow: 3,
           overflow: "hidden",
-          flexDirection: { xs: "column", md: "row" },
+          flexDirection: { xs: "column", sm: "row" },
         }}
       >
         {/* Result Section */}
