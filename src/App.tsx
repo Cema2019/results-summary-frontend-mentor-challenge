@@ -1,5 +1,5 @@
 import { Box, Typography, Card, Button, Avatar, Stack } from "@mui/material";
-import BoltRoundedIcon from '@mui/icons-material/BoltRounded';
+import BoltRoundedIcon from "@mui/icons-material/BoltRounded";
 
 const App: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ const App: React.FC = () => {
       <Box
         sx={{
           display: "flex",
-          maxWidth: 500,
+          maxWidth: 600,
           maxHeight: "400px",
           backgroundColor: "white",
           borderRadius: 7,
@@ -59,8 +59,8 @@ const App: React.FC = () => {
               sx={{
                 fontWeight: "bold",
                 lineHeight: 1,
-                color: "white", 
-                marginBottom: 1
+                color: "white",
+                marginBottom: 1,
               }}
             >
               76
@@ -96,14 +96,41 @@ const App: React.FC = () => {
             padding: 3,
           }}
         >
-          <Typography variant="h6" sx={{ marginBottom: 2, fontWeight: "bold", color: "#303b59" }}>
+          <Typography
+            variant="h6"
+            sx={{ marginBottom: 2, fontWeight: "bold", color: "#303b59" }}
+          >
             Summary
           </Typography>
           <Stack spacing={1}>
-            <SummaryItem icon="/src/assets/icon-reaction.svg" category="Reaction" score={80} color="#ff595e" backgroundColor="#fff6f5" />
-            <SummaryItem icon="/src/assets/icon-memory.svg" category="Memory" score={92} color="#ffca3a" backgroundColor="#fffbf2" />
-            <SummaryItem icon="/src/assets/icon-verbal.svg" category="Verbal" score={61} color="#8ac926" backgroundColor="#f2fbfa" />
-            <SummaryItem icon="/src/assets/icon-visual.svg" category="Visual" score={72} color="#1982c4" backgroundColor="#f3f3fd" />
+            <SummaryItem
+              icon="/src/assets/icon-reaction.svg"
+              category="Reaction"
+              score={80}
+              color="#ff595e"
+              backgroundColor="#fff6f5"
+            />
+            <SummaryItem
+              icon="/src/assets/icon-memory.svg"
+              category="Memory"
+              score={92}
+              color="#ffca3a"
+              backgroundColor="#fffbf2"
+            />
+            <SummaryItem
+              icon="/src/assets/icon-verbal.svg"
+              category="Verbal"
+              score={61}
+              color="#8ac926"
+              backgroundColor="#f2fbfa"
+            />
+            <SummaryItem
+              icon="/src/assets/icon-visual.svg"
+              category="Visual"
+              score={72}
+              color="#1982c4"
+              backgroundColor="#f3f3fd"
+            />
           </Stack>
           <Button
             variant="contained"
@@ -151,12 +178,16 @@ const SummaryItem: React.FC<SummaryItemProps> = ({
         boxShadow: 0,
       }}
     >
-      <img src={icon} alt={`${category} icon`} width={24} height={24} />
-      <Typography sx={{ fontWeight: "bold", color, backgroundColor }}>{category}</Typography>
+      <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+        <img src={icon} alt={`${category} icon`} width={24} height={24} />
+        <Typography sx={{ fontWeight: "bold", color }}>{category}</Typography>
+      </Box>
+      <Box>
       <Typography>
-        <strong style={{ color: "#303b59" }}>{score}</strong> 
+        <strong style={{ color: "#303b59" }}>{score}</strong>
         <span style={{ color: "lightgray", fontWeight: "bold" }}> / 100</span>
       </Typography>
+      </Box>
     </Card>
   );
 };
