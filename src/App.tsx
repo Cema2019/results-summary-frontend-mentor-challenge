@@ -15,7 +15,7 @@ const App: React.FC = () => {
       <Box
         sx={{
           display: "flex",
-          maxWidth: 600,
+          maxWidth: 500,
           maxHeight: "400px",
           backgroundColor: "white",
           borderRadius: 7,
