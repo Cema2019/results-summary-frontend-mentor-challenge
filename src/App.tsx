@@ -1,5 +1,4 @@
 import { Box, Typography, Card, Button, Avatar, Stack } from "@mui/material";
-import BoltRoundedIcon from "@mui/icons-material/BoltRounded";
 
 const App: React.FC = () => {
   return (
