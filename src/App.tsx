@@ -35,7 +35,7 @@ const App: React.FC = () => {
             borderRadius: 7,
           }}
         >
-          <Typography variant="h6" sx={{ color: "lightgray", marginBottom: 4 }}>
+          <Typography variant="h6" sx={{ color: "#a0a2af", marginBottom: 4 }}>
             Your Result
           </Typography>
           <Avatar
@@ -70,7 +70,7 @@ const App: React.FC = () => {
                 fontSize: "0.8rem",
                 fontWeight: 600,
                 lineHeight: 1,
-                color: "lightgray",
+                color: "#a0a2af",
               }}
             >
               of 100
@@ -83,7 +83,7 @@ const App: React.FC = () => {
           >
             Great
           </Typography>
-          <Typography variant="body2" sx={{ marginTop: 1, color: "lightgray" }}>
+          <Typography variant="body2" sx={{ marginTop: 1, color: "#a0a2af" }}>
             You scored higher than 65% of the people who have taken these tests.
           </Typography>
         </Box>
@@ -184,7 +184,7 @@ const SummaryItem: React.FC<SummaryItemProps> = ({
       <Box>
       <Typography variant="caption" >
         <strong style={{ color: "#303b59" }}>{score}</strong>
-        <span style={{ color: "lightgray", fontWeight: "bold" }}> / 100</span>
+        <span style={{ color: "#a0a2af", fontWeight: "bold" }}> / 100</span>
       </Typography>
       </Box>
     </Card>
